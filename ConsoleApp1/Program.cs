@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1;
+﻿using System.Diagnostics;
+
+namespace ConsoleApp1;
 
 class Program
 {
@@ -8,8 +10,10 @@ class Program
 
         if (string.IsNullOrWhiteSpace(line)) {
             Console.WriteLine(" BLĄD: Wejscie nie może byc puste");
-            return;
         }
-
+        
+        int count = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Length;
+        Console.WriteLine("Liczba wprowadzonych elementow: " + count);
+        
     }
 }
