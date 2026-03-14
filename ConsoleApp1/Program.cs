@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Linq;
+using System.Net.Http.Headers;
 
 namespace ConsoleApp1;
 
@@ -12,8 +14,18 @@ class Program
             Console.WriteLine(" BLĄD: Wejscie nie może byc puste");
         }
         
-        int count = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Length;
-        Console.WriteLine("Liczba wprowadzonych elementow: " + count);
+        int[] numbers = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
         
+        Console.WriteLine("Liczba wprowadzonych elementow: " + numbers.Length);
+
+        double average = calculateAvaeage(numbers);
+        Console.WriteLine("Średnia: " + average);
     }
+
+    static double calculateAvaeage(int[] nums)
+    {
+        if(nums.Length == 0) return 0;
+        return nums.Average();
+    }
+
 }
