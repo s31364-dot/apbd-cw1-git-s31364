@@ -20,6 +20,9 @@ class Program
         int max = CalculateMax(numbers);
         Console.WriteLine("Maksymalna wartość: " + max);        
         
+        int min = CalculateMin(numbers);
+        Console.WriteLine("Minimalna wartość:" + min);
+        
     }
 
     static double calculateAvaerage(int[] nums)
@@ -36,7 +39,8 @@ class Program
 
     static int CalculateMin(int[] nums)
     {
-        return 0;
+        if (nums.Length == 0) return 0;
+        return nums.Min();
     }
 
 }
