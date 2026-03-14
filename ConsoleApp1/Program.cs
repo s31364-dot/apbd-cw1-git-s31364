@@ -7,7 +7,11 @@ class Program
         string line = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(line)) {
-            Console.WriteLine(" [BŁĄD Z MAIN] Musisz podać chociaż jedną liczbę!");
+
+            if (string.IsNullOrWhiteSpace(line)) {
+                Console.WriteLine("[BŁĄD] Wprowadzono puste dane! Musisz podać chociaż jedną liczbę!");
+            }
+
         }
         
         int[] numbers = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
