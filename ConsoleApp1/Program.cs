@@ -7,7 +7,7 @@ class Program
         string line = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(line)) {
-            Console.WriteLine(" BLĄD: Wejscie nie może byc puste");
+            Console.WriteLine(" [BŁĄD Z MAIN] Musisz podać chociaż jedną liczbę!");
         }
         
         int[] numbers = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
