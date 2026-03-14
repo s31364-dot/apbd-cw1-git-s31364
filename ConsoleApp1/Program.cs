@@ -16,12 +16,22 @@ class Program
 
         double average = calculateAvaerage(numbers);
         Console.WriteLine("Średnia: " + average);
+        
+        int max = CalculateMax(numbers);
+        Console.WriteLine("Maksymalna wartość: " + max);        
+        
     }
 
     static double calculateAvaerage(int[] nums)
     {
         if(nums.Length == 0) return 0;
         return nums.Average();
+    }
+
+    static int CalculateMax(int[] nums)
+    {
+        if(nums.Length == 0) return 0;
+        return nums.Max();
     }
 
 }
