@@ -1,8 +1,4 @@
-﻿using System.Diagnostics;
-using System.Linq;
-using System.Net.Http.Headers;
-
-namespace ConsoleApp1;
+﻿namespace ConsoleApp1;
 
 class Program
 {
@@ -18,11 +14,11 @@ class Program
         
         Console.WriteLine("Liczba wprowadzonych elementow: " + numbers.Length);
 
-        double average = calculateAvaeage(numbers);
+        double average = calculateAvaerage(numbers);
         Console.WriteLine("Średnia: " + average);
     }
 
-    static double calculateAvaeage(int[] nums)
+    static double calculateAvaerage(int[] nums)
     {
         if(nums.Length == 0) return 0;
         return nums.Average();
