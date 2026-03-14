@@ -7,7 +7,7 @@ class Program
         string line = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(line)) {
-            Console.WriteLine(" BLĄD: Wejscie nie może byc puste");
+            Console.WriteLine(" BLĄD z GAŁĘZI FEATURE: Wejscie nie może byc puste");
         }
         
         int[] numbers = line.Split(' ',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
